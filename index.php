@@ -5,7 +5,7 @@ Dopo aggiungete Bootstrap e mostrate le informazioni con una tabella. -->
 
 
 <?php
-
+    
     $hotels = [
 
         [
@@ -88,7 +88,7 @@ Dopo aggiungete Bootstrap e mostrate le informazioni con una tabella. -->
         <tr>
             <th scope="row"><?php echo $singleHotel['name'] ?> </th>
             <td> <?php echo $singleHotel['description'] ?></td>
-            <td> <?php echo $singleHotel['parking'] ?></td>
+            <td> <?php echo $singleHotel['parking'] ? 'Yes' : 'No' ?></td>
             <td> <?php echo $singleHotel['vote'] ?></td>
             <td> <?php echo $singleHotel['distance_to_center'] ?></td>
         </tr>
