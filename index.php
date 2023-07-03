@@ -61,7 +61,7 @@ Dopo aggiungete Bootstrap e mostrate le informazioni con una tabella. -->
     <ul>
     <?php foreach ($hotels as $singleHotel) {?>
         <li>
-            <?php echo "<p> Nome: . " . $singleHotel['name'] . "</p>"?>
+            <?php echo $singleHotel['name'] ?>
             <?php echo "<p> Descrizione: " . $singleHotel['description'] . "</p>" ?> 
             <?php echo "<p> parking: " . $singleHotel['parking'] . "</p>" ?> 
             <?php echo "<p> Voto: " . $singleHotel['vote'] . "</p>" ?> 
@@ -70,8 +70,33 @@ Dopo aggiungete Bootstrap e mostrate le informazioni con una tabella. -->
     <?php } ?>
     </ul>
 
+    <h1 class="my-5">++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</h1>
 
 
+    <table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Parking</th>
+            <th scope="col">Vote</th>
+            <th scope="col">DistanceToCenter</th>
+        </tr>
+    </thead>
+    <tbody>
+    <?php foreach ($hotels as $singleHotel) {?>
+        <tr>
+            <th scope="row"><?php echo $singleHotel['name'] ?> </th>
+            <td> <?php echo $singleHotel['description'] ?></td>
+            <td> <?php echo $singleHotel['parking'] ?></td>
+            <td> <?php echo $singleHotel['vote'] ?></td>
+            <td> <?php echo $singleHotel['distance_to_center'] ?></td>
+        </tr>
+    <?php } ?>
+
+    </tbody>
+    
+</table>
 
 </body>
 </html>
