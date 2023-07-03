@@ -47,3 +47,30 @@ Dopo aggiungete Bootstrap e mostrate le informazioni con una tabella. -->
     ];
 
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhpHotel</title>
+</head>
+<body>
+
+    <ul>
+    <?php foreach ($hotels as $singleHotel) {?>
+        <li>
+            <?php echo "<p> Nome: . " . $singleHotel['name'] . "</p>"?>
+            <?php echo "<p> Descrizione: " . $singleHotel['description'] . "</p>" ?> 
+            <?php echo "<p> parking: " . $singleHotel['parking'] . "</p>" ?> 
+            <?php echo "<p> Voto: " . $singleHotel['vote'] . "</p>" ?> 
+            <?php echo "<p> Distanza dal centro: " . $singleHotel['distance_to_center'] . "</p>" ?> 
+        </li>
+    <?php } ?>
+    </ul>
+
+
+
+
+</body>
+</html>
